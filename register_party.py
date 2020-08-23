@@ -1,0 +1,2 @@
+from party_registration import PartyRegistration
+from party_registration import show_data
