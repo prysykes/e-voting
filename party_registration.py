@@ -1,5 +1,8 @@
+import json
+
 list_of_parties = []
 party_dict = {}
+file_path = 'textFiles\parties.json'
 
 
 class PartyRegistration:
@@ -16,10 +19,13 @@ class PartyRegistration:
             party_dict[party] = 0
             continue  # continues the loop until user enters q or presses enter
         self.party = party
-   
+  
     def store_party(self):
-        pass
-
+        """Stores the list of parties the user entered"""
+        with open(file_path, 'w', newline="\n", encoding="utf-8") as f_paties:
+            json.dump(list_of_parties, f_paties)
+    
+    
 
 def show_data():
     print(list_of_parties)
